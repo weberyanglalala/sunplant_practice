@@ -1,5 +1,39 @@
 .header {
-    h1 {
-        color: var(--primary-color);
-    }
+    background-color: #fa0;
+}
+.header-wrap {
+    width: 95%;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav {
+    width: calc((100% - 160px) / 2);
+}
+.nav-item-group {
+    display: inline-flex;
+}
+.nav-item-link {
+    padding: 4px 8px;
+}
+.logo {
+    width: 160px;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.user-panel {
+    width: calc((100% - 160px) / 2);
+    display: flex;
+    justify-content: flex-end;
+}
+.user-panel-control {
+    display: inline-block;
+    font-size: 25px;
+}
+.user-panel-control {
+    margin: 0 12px;
 }
