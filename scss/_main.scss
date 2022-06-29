@@ -3,16 +3,20 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     img {
         vertical-align: bottom;
     }
+
     padding: 200px 15px 100px;
 }
+
 .banner-title {
     font-size: 36px;
     line-height: 1.5;
     font-weight: 100;
 }
+
 .banner-price {
     font-size: 16px;
     font-weight: 300;
@@ -28,10 +32,12 @@
     background-color: #000;
     color: var(--bg-color-light);
 }
+
 // benefits
 .benefits {
     padding: 40px 15px;
 }
+
 .benefits-title {
     color: var(--primary-color);
     font-size: 25px;
@@ -39,6 +45,7 @@
     text-align: center;
     margin-bottom: 2rem;
 }
+
 .benefits-text {
     text-align: center;
     font-size: 14px;
@@ -47,22 +54,134 @@
     font-weight: 300;
     margin-bottom: 2rem;
 }
+
 .benefit-item-title {
     font-size: 24px;
     line-height: 1.5;
     margin-bottom: 1rem;
 }
+
 .benefit-item-text {
     font-weight: 300;
     margin-bottom: 1.5rem;
     color: var(--text-light);
 }
+
 .benefit-figure img {
     display: block;
     width: 100%;
     margin: auto;
 }
+
+// products
+.products {
+    padding: 40px 0;
+}
+
+.products-title {
+    font-size: 30px;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.product-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: calc((100% - 40px) / 2);
+    padding: 0 10px;
+    margin-bottom: 1rem;
+}
+
+.product-item-pic {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    .sub-pic {
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+
+    .product-item-controls {
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+
+    margin-bottom: 1.5rem;
+}
+
+.product-item:hover .product-item-pic {
+    .sub-pic {
+        left: 0;
+        opacity: .5;
+    }
+
+    .product-item-controls {
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        transform: translate(-50%, -50%);
+    }
+
+    .main-pic {
+        opacity: 0;
+    }
+}
+
+.product-item-controls .icon-wrap {
+    background-color: var(--bg-color-dark);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    i {
+        color: var(--primary-color);
+    }
+}
+
+.product-item-controls a:hover .icon-wrap {
+    background-color: var(--primary-color);
+
+    i {
+        color: var(--bg-color-light);
+    }
+}
+
+.product-item-name {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    a {
+        color: var(--text-dark);
+    }
+    a:hover {
+        color: var(--primary-color);
+    }
+
+}
+
+.product-item-price {
+    display: block;
+    text-align: center;
+}
+
 @media screen and (max-width: 574px) {
+
     // only for banner
     .banner-main {
         position: relative;
@@ -71,9 +190,11 @@
 
         z-index: 1;
     }
+
     .btn {
         align-self: start;
     }
+
     .banner-img {
         position: absolute;
         top: 150px;
@@ -81,61 +202,83 @@
         width: 50%;
     }
 }
+
 @media screen and (min-width: 575px) {
+
     // banner
     .banner-wrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     .banner-main {
         display: flex;
         flex-direction: column;
         width: calc((100% - 30px) / 2);
+
         .btn {
             display: block;
             align-self: start;
         }
     }
+
     .banner-img {
         width: calc((100% - 30px) / 2);
     }
 }
+
 @media screen and (min-width: 768px) {
+    // benefit
     .benefit-group-wrap {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
     }
+
     .benefit-figure {
         width: 100%;
         order: -1;
+
         img {
             width: 100%;
             max-width: 450px;
         }
     }
+
     .benefit-group {
         width: 45%;
+
         &:nth-of-type(1) {
             text-align: right;
         }
     }
+    // product
+    .product-item {
+        width: calc((100% - 90px) / 3);
+        padding: 0 15px;
+    }
+    
 }
+
 @media screen and (min-width: 992px) {
+
     // banner
     .banner-title {
         font-size: 48px;
     }
+
     // benefit
     .benefit-group-wrap {
         flex-direction: row;
     }
+
     .benefit-figure {
         width: 33.33333%;
         order: 0;
     }
+
     .benefit-group {
         width: 33.33333%;
     }

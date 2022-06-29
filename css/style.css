@@ -450,10 +450,13 @@ li {
   }
 
   .featured .mega-box {
-    width: 1200px;
+    width: 800px;
+  }
+  .featured .mega-box .mega-box-item {
+    width: 170px;
   }
   .featured .mega-box .mega-box-item img {
-    width: 200px;
+    width: 170px;
     vertical-align: bottom;
   }
 
@@ -590,6 +593,101 @@ li {
   margin: auto;
 }
 
+.products {
+  padding: 40px 0;
+}
+
+.products-title {
+  font-size: 30px;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+
+.product-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: calc((100% - 40px) / 2);
+  padding: 0 10px;
+  margin-bottom: 1rem;
+}
+
+.product-item-pic {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.product-item-pic img {
+  width: 100%;
+  display: block;
+}
+.product-item-pic .sub-pic {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.product-item-pic .product-item-controls {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+
+.product-item:hover .product-item-pic .sub-pic {
+  left: 0;
+  opacity: 0.5;
+}
+.product-item:hover .product-item-pic .product-item-controls {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  transform: translate(-50%, -50%);
+}
+.product-item:hover .product-item-pic .main-pic {
+  opacity: 0;
+}
+
+.product-item-controls .icon-wrap {
+  background-color: var(--bg-color-dark);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.product-item-controls .icon-wrap i {
+  color: var(--primary-color);
+}
+
+.product-item-controls a:hover .icon-wrap {
+  background-color: var(--primary-color);
+}
+.product-item-controls a:hover .icon-wrap i {
+  color: var(--bg-color-light);
+}
+
+.product-item-name {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.product-item-name a {
+  color: var(--text-dark);
+}
+.product-item-name a:hover {
+  color: var(--primary-color);
+}
+
+.product-item-price {
+  display: block;
+  text-align: center;
+}
+
 @media screen and (max-width: 574px) {
   .banner-main {
     position: relative;
@@ -652,6 +750,11 @@ li {
   }
   .benefit-group:nth-of-type(1) {
     text-align: right;
+  }
+
+  .product-item {
+    width: calc((100% - 90px) / 3);
+    padding: 0 15px;
   }
 }
 @media screen and (min-width: 992px) {
