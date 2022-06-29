@@ -856,4 +856,66 @@ li {
   .benefit-group {
     width: 33.33333%;
   }
+}
+.footer {
+  padding: 40px 0;
+  background-color: var(--bg-color-dark);
+}
+
+.footer-logo {
+  width: 160px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.footer-logo img {
+  width: 100%;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.about-item {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.about-item a {
+  color: var(--text-dark);
+}
+.about-item a:hover {
+  color: var(--primary-color);
+}
+
+.social-media {
+  display: flex;
+  width: 200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.social-media .icon-wrap {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #000;
+  color: var(--bg-color-light);
+}
+
+.social-media-item a:hover .icon-wrap {
+  background-color: var(--primary-color);
+}
+
+.copyright-decription {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-light);
 }/*# sourceMappingURL=style.css.map */
