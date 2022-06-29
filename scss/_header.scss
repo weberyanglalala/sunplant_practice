@@ -12,6 +12,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    z-index: 5;
 }
 
 @media screen and (max-width: 991px) {
@@ -29,7 +31,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: 100;
 
         height: 100vh;
         overflow-y: scroll;
@@ -179,6 +181,19 @@
                 font-size: 40px;
             }
         }
+        .btn {
+            display: block;
+            width: 100%;
+    
+            cursor: pointer;
+    
+            border: none;
+            background-color: #000;
+            color: #ccc;
+            padding: 12px 0;
+    
+            margin-bottom: 1rem;
+        }
     }
 
     .form-group {
@@ -220,19 +235,7 @@
         margin-bottom: 16px;
     }
 
-    .btn {
-        display: block;
-        width: 100%;
-
-        cursor: pointer;
-
-        border: none;
-        background-color: #000;
-        color: #ccc;
-        padding: 12px 0;
-
-        margin-bottom: 1rem;
-    }
+    
 
     .form-division {
         display: block;
@@ -310,7 +313,6 @@
 
 @media screen and (min-width: 992px) {
     .header-wrap {
-        width: 95%;
         margin: auto;
         padding: 30px 15px;
         display: flex;

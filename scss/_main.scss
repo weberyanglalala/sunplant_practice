@@ -1,0 +1,73 @@
+.banner {
+    background-image: url("../images/bg/bg-slide-leave.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    img {
+        vertical-align: bottom;
+    }
+    padding: 200px 15px 100px;
+}
+.banner-title {
+    font-size: 36px;
+    line-height: 1.5;
+    font-weight: 100;
+}
+.banner-price {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 8px;
+    font-weight: 300;
+    padding: 12px 20px;
+    background-color: #000;
+    color: var(--bg-color-light);
+}
+
+@media screen and (max-width: 574px) {
+    .banner-main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        z-index: 1;
+    }
+    .btn {
+        align-self: start;
+    }
+    .banner-img {
+        position: absolute;
+        top: 150px;
+        right: 0;
+        width: 50%;
+    }
+}
+@media screen and (min-width: 575px) {
+    .banner-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .banner-main {
+        display: flex;
+        flex-direction: column;
+        width: calc((100% - 30px) / 2);
+        .btn {
+            display: block;
+            align-self: start;
+        }
+    }
+    .banner-img {
+        width: calc((100% - 30px) / 2);
+    }
+}
+@media screen and (min-width: 992px) {
+    .banner-title {
+        font-size: 48px;
+    }
+}
